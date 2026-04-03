@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Love Edit | Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FDFCFD;     /* Elegant Off-White */
+            --primary-pink: #F48FB1;  /* Soft Pastel Pink */
+            --hover-pink: #F06292;    /* Slightly deeper pink */
+            --text-main: #2D2D2D;    /* Soft Dark Grey */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            /* Simple fade-in animation */
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 3.5rem);
+            font-weight: 200;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.5rem;
+        }
+
+        .status {
+            color: var(--primary-pink);
+            font-size: 0.9rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            margin-bottom: 4rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            max-width: 320px;
+            border: none;
+            border-bottom: 1px solid #E0E0E0;
+            background: transparent;
+            padding: 10px 0;
+            font-family: inherit;
+            font-size: 1rem;
+            text-align: center;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="email"]:focus {
+            border-bottom: 2px solid var(--primary-pink);
+        }
+
+        button {
+            background-color: var(--primary-pink);
+            color: white;
+            border: none;
+            padding: 14px 40px;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            border-radius: 28px; /* M3 extra-rounded style */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(244, 143, 177, 0.2);
+        }
+
+        button:hover {
+            background-color: var(--hover-pink);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(244, 143, 177, 0.3);
+        }
+
+        .footer {
+            margin-top: 5rem;
+            font-size: 0.7rem;
+            color: rgba(0,0,0,0.2);
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>The Love Edit</h1>
+        <p class="status">Website Coming Soon</p>
+
+        <form class="input-group" onsubmit="event.preventDefault(); alert('Thank you! We will notify you.');">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Notify Me</button>
+        </form>
+
+        <div class="footer">
+            &copy; 2026 THE LOVE EDIT. ALL RIGHTS RESERVED.
+        </div>
+    </div>
+
+</body>
+</html>
